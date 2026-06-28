@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmileLab — Chat Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/chatbot.css" />
+</head>
+<body>
+  <!-- Lead-capture chatbot widget -->
+  <div class="chatbot" id="chatbot">
+    <!-- Chat panel -->
+    <div class="chatbot__panel" id="chatbotPanel" role="dialog" aria-label="SmileLab chat assistant" aria-hidden="true">
+      <!-- Header -->
+      <header class="chatbot__header">
+        <span class="chatbot__avatar" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3C9.5 3 9 4 7 4 5 4 3.6 5.4 3.6 7.6c0 1.9.6 3.2 1.2 5 .4 1.5.6 3 .9 4.5.3 1.4.6 2.4 1.5 2.4 1 0 1.2-1.4 1.5-2.9.2-1.5.5-2.7 1.3-2.7s1.1 1.2 1.3 2.7c.3 1.5.5 2.9 1.5 2.9.9 0 1.2-1 1.5-2.4.3-1.5.5-3 .9-4.5.6-1.8 1.2-3.1 1.2-5C20.4 5.4 19 4 17 4c-2 0-2.5-1-5-1Z" stroke="#10131a" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div class="chatbot__id">
+          <p class="chatbot__name">SmileLab Assistant</p>
+          <p class="chatbot__status"><span class="chatbot__dot"></span> Online now</p>
+        </div>
+        <button class="chatbot__close" id="chatbotClose" aria-label="Close chat" type="button">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </header>
+
+      <!-- Messages -->
+      <div class="chatbot__messages" id="chatbotMessages">
+        <div class="chatbot__msg chatbot__msg--bot">
+          Hi there! 👋 I'm the SmileLab assistant. Want to book a visit or ask a quick question?
+        </div>
+      </div>
+
+      <!-- Quick replies -->
+      <div class="chatbot__quick" id="chatbotQuick">
+        <button class="chatbot__chip" type="button" data-reply="I'd like to book an appointment">Book an appointment</button>
+        <button class="chatbot__chip" type="button" data-reply="What are your opening hours?">Opening hours</button>
+        <button class="chatbot__chip" type="button" data-reply="Do you accept insurance?">Insurance</button>
+      </div>
+
+      <!-- Input -->
+      <form class="chatbot__form" id="chatbotForm">
+        <input class="chatbot__input" id="chatbotInput" type="text" placeholder="Type your message…" autocomplete="off" />
+        <button class="chatbot__send" type="submit" aria-label="Send message">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 12l16-8-6 16-3-6-7-2Z" stroke="#10131a" stroke-width="1.7" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- Floating launcher bubble -->
+    <button class="chatbot__launcher" id="chatbotLauncher" aria-label="Open chat" type="button">
+      <span class="chatbot__launcher-icon chatbot__launcher-icon--chat" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 5h16v11H8l-4 4V5Z" stroke="#10131a" stroke-width="1.7" stroke-linejoin="round"/>
+          <path d="M8 9h8M8 12h5" stroke="#10131a" stroke-width="1.7" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="chatbot__launcher-icon chatbot__launcher-icon--close" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6l12 12M18 6L6 18" stroke="#10131a" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="chatbot__badge" id="chatbotBadge">1</span>
+    </button>
+  </div>
+
+  <script src="js/chatbot.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<svg viewBox="0 0 400 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized white tooth">
+  <defs>
+    <linearGradient id="toothBody" x1="120" y1="40" x2="300" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="0.55" stop-color="#eef3fb" />
+      <stop offset="1" stop-color="#cfddf2" />
+    </linearGradient>
+    <linearGradient id="toothShine" x1="150" y1="70" x2="190" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+    <filter id="toothShadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#1f3f73" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- main tooth body: rounded crown + two roots -->
+  <path filter="url(#toothShadow)" fill="url(#toothBody)" d="
+    M200 28
+    C150 28 96 56 78 116
+    C62 168 78 214 96 252
+    C112 286 120 320 128 360
+    C134 392 146 416 164 416
+    C184 416 188 384 192 352
+    C195 326 197 308 200 308
+    C203 308 205 326 208 352
+    C212 384 216 416 236 416
+    C254 416 266 392 272 360
+    C280 320 288 286 304 252
+    C322 214 338 168 322 116
+    C304 56 250 28 200 28 Z" />
+
+  <!-- top glossy highlight -->
+  <path fill="url(#toothShine)" d="
+    M178 64
+    C140 76 112 104 102 146
+    C96 172 100 200 112 226
+    C120 244 132 250 138 240
+    C146 226 138 196 142 166
+    C146 132 160 100 188 80
+    C196 74 192 60 178 64 Z" />
+
+  <!-- subtle cusp line on the crown -->
+  <path stroke="#c2d3ee" stroke-width="6" stroke-linecap="round" opacity="0.7" d="
+    M150 120 C180 138 220 138 250 120" />
+</svg>

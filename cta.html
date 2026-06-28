@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmileLab — Book Your Visit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/cta.css" />
+</head>
+<body>
+  <section class="cta" id="book">
+    <div class="cta__panel">
+      <!-- Left: pitch -->
+      <div class="cta__intro">
+        <span class="cta__eyebrow">Book Your Visit</span>
+        <h2 class="cta__title">Ready for your best smile yet?</h2>
+        <p class="cta__text">
+          Schedule a consultation in under a minute. Our team will confirm your slot and answer any questions before you arrive.
+        </p>
+        <ul class="cta__perks">
+          <li class="cta__perk">
+            <span class="cta__perk-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12l4 4 10-10" stroke="#10131a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            Same-week appointments available
+          </li>
+          <li class="cta__perk">
+            <span class="cta__perk-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12l4 4 10-10" stroke="#10131a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            No-obligation first consultation
+          </li>
+          <li class="cta__perk">
+            <span class="cta__perk-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12l4 4 10-10" stroke="#10131a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            Most insurance plans accepted
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: form -->
+      <form class="cta__form" novalidate>
+        <h3 class="cta__form-title">Request an appointment</h3>
+
+        <div class="cta__field">
+          <label class="cta__label" for="cta-name">Full name</label>
+          <input class="cta__input" id="cta-name" name="name" type="text" placeholder="Jane Doe" required />
+        </div>
+
+        <div class="cta__field">
+          <label class="cta__label" for="cta-phone">Phone number</label>
+          <input class="cta__input" id="cta-phone" name="phone" type="tel" placeholder="(555) 123-4567" required />
+        </div>
+
+        <div class="cta__field">
+          <label class="cta__label" for="cta-service">Service</label>
+          <select class="cta__input cta__select" id="cta-service" name="service">
+            <option value="">Select a service…</option>
+            <option>Routine Checkup</option>
+            <option>Teeth Whitening</option>
+            <option>Dental Implants</option>
+            <option>Orthodontics / Invisalign</option>
+            <option>Emergency Care</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="cta__field">
+          <label class="cta__label" for="cta-date">Preferred date</label>
+          <input class="cta__input" id="cta-date" name="date" type="date" />
+        </div>
+
+        <button class="cta__submit" type="submit">
+          Book My Appointment
+          <span class="cta__submit-arrow" aria-hidden="true">→</span>
+        </button>
+
+        <p class="cta__note">We'll confirm within a few hours. No spam, ever.</p>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

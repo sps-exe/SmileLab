@@ -1,0 +1,102 @@
+/* ============================================================
+   Theme system — semantic surfaces + dark mode
+   Loaded LAST so its overrides win the cascade.
+
+   Light mode keeps the original bright look (blue page, white
+   cards, deep-blue text). Dark mode remaps the page, card
+   surfaces, secondary panels and muted text to a navy palette.
+   The lime accent (--lime) and text-on-accent (--ink) are the
+   same in both modes; white text on dark/blue panels stays white.
+
+   Default on first load is LIGHT — see the inline <head> script
+   on each page. Dark is opt-in via the navbar toggle and is then
+   remembered in localStorage.
+   ============================================================ */
+
+:root {
+  --surface: var(--white);   /* card / elevated background        */
+  --panel: #eef3fb;          /* secondary panel (faq item, cert…) */
+  --text: var(--blue-deep);  /* primary text on cards             */
+  --text-muted: #5f6b7d;     /* secondary text on cards           */
+}
+
+:root[data-theme="dark"] {
+  --blue: #0e1726;        /* page + hero + blue panels */
+  --blue-deep: #2f5390;   /* accent panels (pricing/faq icon) — lighter than page */
+  --surface: #17233c;     /* cards */
+  --panel: #1e2c46;       /* secondary panels, a touch lighter than cards */
+  --text: #eaf1fd;        /* primary text on cards */
+  --text-muted: #9fb1cc;  /* secondary / muted text */
+  /* --white, --lime, --ink intentionally unchanged */
+}
+
+/* Light mode keeps the original green page gradient (defined as the
+   body rule in the section files) with the blue rounded hero card on
+   top. In dark mode, override that page background to deep navy. */
+:root[data-theme="dark"] body {
+  background: #0a111d;
+}
+
+/* FAQ question hover uses var(--blue), which goes dark in dark mode —
+   give it a readable hover color instead. */
+:root[data-theme="dark"] .faq-item__q:hover {
+  color: var(--lime);
+}
+
+/* Review body text keeps its exact light value (#2b3b52); lift it in dark. */
+:root[data-theme="dark"] .review-card__text {
+  color: var(--text);
+}
+
+/* The two bright-blue accent gradients (CTA intro panel, chatbot header)
+   would glow against the dark page — deepen them in dark mode. */
+:root[data-theme="dark"] .cta__intro,
+:root[data-theme="dark"] .chatbot__header {
+  background: linear-gradient(160deg, #1c3358, #13243f);
+}
+
+/* ---------- Theme toggle button (sits in the navbar) ---------- */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex: none;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* Show moon in light mode, sun in dark mode */
+.theme-toggle__sun { display: none; }
+.theme-toggle__moon { display: block; }
+
+:root[data-theme="dark"] .theme-toggle__sun { display: block; }
+:root[data-theme="dark"] .theme-toggle__moon { display: none; }
+
+@media (max-width: 760px) {
+  .theme-toggle {
+    width: 42px;
+    height: 42px;
+  }
+}

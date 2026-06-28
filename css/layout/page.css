@@ -1,0 +1,157 @@
+/* SmileLab — shared detail-page chrome (header band + title + back link) */
+
+:root {
+  --blue: #5d92d4;
+  --blue-deep: #3b6fb8;
+  --lime: #c9f24d;
+  --ink: #10131a;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: linear-gradient(120deg, #d8e6c8, #bcd9e0);
+  min-height: 100vh;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ---------- Top header band (blue) ---------- */
+.page-top {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  background: var(--blue);
+  border-radius: 36px;
+  padding: 22px 40px;
+}
+
+.page-top__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.page-top .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.page-top .brand__icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+}
+
+.page-top .brand__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.page-top .brand__name {
+  color: var(--white);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.page-top .nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.page-top .nav__link {
+  color: rgba(255, 255, 255, 0.66);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.page-top .nav__link:hover,
+.page-top .nav__link--active {
+  color: var(--white);
+}
+
+.page-top .contacts-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 999px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.page-top .contacts-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.page-top .contacts-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  body {
+    padding: 16px;
+    gap: 16px;
+  }
+  .page-top {
+    padding: 18px 22px;
+    border-radius: 26px;
+  }
+  .page-top__nav {
+    flex-wrap: wrap;
+    gap: 14px 18px;
+  }
+  .page-top .brand {
+    margin-right: auto;
+  }
+  .page-top .brand__name {
+    font-size: 22px;
+  }
+  .page-top .nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    padding-top: 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .page-top .nav__link {
+    font-size: 15px;
+  }
+  .page-top .contacts-btn {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-top .nav {
+    gap: 8px 16px;
+  }
+  .page-top .nav__link {
+    font-size: 14px;
+  }
+}

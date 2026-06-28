@@ -1,0 +1,45 @@
+:root {
+  --blue: #5d92d4;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: var(--blue);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px;
+}
+
+.heading-block {
+  max-width: 620px;
+}
+
+.heading-block__title {
+  color: var(--white);
+  font-size: clamp(56px, 9vw, 120px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.heading-block__subtitle {
+  margin-top: 28px;
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(16px, 1.6vw, 20px);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.heading-block__subtitle strong {
+  color: var(--white);
+  font-weight: 600;
+}

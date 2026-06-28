@@ -1,0 +1,56 @@
+:root {
+  --blue: #5d92d4;
+  --blue-deep: #3b6fb8;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: var(--blue);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.avatar-stack {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-stack__img,
+.avatar-stack__count {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 3px solid var(--blue);
+  object-fit: cover;
+}
+
+/* overlap each item onto the previous one */
+.avatar-stack__img:not(:first-child),
+.avatar-stack__count {
+  margin-left: -16px;
+}
+
+.avatar-stack__count {
+  display: grid;
+  place-items: center;
+  background: var(--white);
+  color: var(--blue-deep);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* subtle fan-out on hover */
+.avatar-stack:hover .avatar-stack__img:not(:first-child),
+.avatar-stack:hover .avatar-stack__count {
+  margin-left: -8px;
+  transition: margin-left 0.25s ease;
+}

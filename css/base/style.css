@@ -1,0 +1,114 @@
+:root {
+  --blue: #5d92d4;
+  --blue-deep: #3b6fb8;
+  --lime: #c9f24d;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: var(--blue);
+  min-height: 100vh;
+  padding: 28px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brand__icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+}
+
+.brand__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.brand__name {
+  color: var(--white);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Nav links */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav__link {
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover {
+  color: var(--white);
+}
+
+.nav__link--active {
+  color: var(--white);
+}
+
+/* Contacts button */
+.contacts-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 999px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contacts-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.contacts-btn__arrow {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 760px) {
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+  }
+}

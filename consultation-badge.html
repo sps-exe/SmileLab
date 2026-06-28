@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmileLab — Consultation Badge</title>
+  <link rel="stylesheet" href="css/consultation-badge.css" />
+</head>
+<body>
+  <a href="#book" class="badge" aria-label="Book your consultation">
+    <svg class="badge__text" viewBox="0 0 200 200" aria-hidden="true">
+      <defs>
+        <path id="badgeCircle"
+          d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" />
+      </defs>
+      <text>
+        <textPath href="#badgeCircle" startOffset="0">
+          BOOK YOUR CONSULTATION • BOOK YOUR CONSULTATION •
+        </textPath>
+      </text>
+    </svg>
+
+    <span class="badge__arrow" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 18L18 6M18 6H8M18 6V16" stroke="#10131a" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </span>
+  </a>
+</body>
+</html>

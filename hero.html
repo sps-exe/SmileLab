@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmileLab — Hero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/hero.css" />
+</head>
+<body>
+  <main class="hero">
+    <!-- Navbar -->
+    <header class="navbar">
+      <a href="#" class="brand">
+        <span class="brand__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3C9.5 3 8.8 4.2 6.8 4.2 4.6 4.2 3 5.9 3 8.4c0 2.1.7 3.6 1.3 5.6.5 1.7.7 3.4 1 5 .3 1.5.7 2.8 1.7 2.8 1.2 0 1.4-1.6 1.7-3.3.3-1.7.6-3.1 1.3-3.1.7 0 1 1.4 1.3 3.1.3 1.7.5 3.3 1.7 3.3 1 0 1.4-1.3 1.7-2.8.3-1.6.5-3.3 1-5C20.3 12 21 10.5 21 8.4 21 5.9 19.4 4.2 17.2 4.2 15.2 4.2 14.5 3 12 3Z"
+              fill="#C9F24D" />
+          </svg>
+        </span>
+        <span class="brand__name">SmileLab</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#about" class="nav__link nav__link--active">About</a>
+        <a href="#results" class="nav__link">Results</a>
+        <a href="#pricing" class="nav__link">Pricing</a>
+        <a href="#reviews" class="nav__link">Reviews</a>
+        <a href="#blog" class="nav__link">Blog</a>
+      </nav>
+
+      <a href="#contacts" class="contacts-btn">
+        <span>Contacts</span>
+        <svg class="contacts-btn__arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 12L12 4M12 4H5M12 4V11" stroke="#3B6FB8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </header>
+
+    <!-- Hero body -->
+    <div class="hero__grid">
+      <!-- Left column -->
+      <section class="hero__left">
+        <h1 class="heading-block__title">
+          Restore<br />
+          Your True<br />
+          Smile
+          <span class="avatar-stack" aria-label="Joined by more than 2000 patients">
+            <img class="avatar-stack__img" src="https://i.pravatar.cc/96?img=5" alt="" />
+            <img class="avatar-stack__img" src="https://i.pravatar.cc/96?img=49" alt="" />
+            <span class="avatar-stack__count">+2k</span>
+          </span>
+        </h1>
+
+        <p class="heading-block__subtitle">
+          Using <strong>advanced technology</strong>, we deliver comprehensive
+          treatments for a healthy, <strong>confident smile.</strong>
+        </p>
+
+        <div class="stat-card">
+          <span class="stat-card__value">98%</span>
+          <span class="stat-card__label">loyal dental<br />patients</span>
+        </div>
+      </section>
+
+      <!-- Right column -->
+      <section class="hero__right">
+        <figure class="hero-image">
+          <img class="hero-image__img" src="assets/tooth.svg" alt="Stylized giant tooth" />
+        </figure>
+
+        <a href="#book" class="badge" aria-label="Book your consultation">
+          <svg class="badge__text" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <path id="badgeCircle" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" />
+            </defs>
+            <text>
+              <textPath href="#badgeCircle" startOffset="0">
+                BOOK YOUR CONSULTATION • BOOK YOUR CONSULTATION •
+              </textPath>
+            </text>
+          </svg>
+          <span class="badge__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 18L18 6M18 6H8M18 6V16" stroke="#10131a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

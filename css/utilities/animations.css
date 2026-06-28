@@ -1,0 +1,55 @@
+/* SmileLab — global motion layer (premium feel) */
+
+/* Anchor smoothness is handled by Lenis (js/smooth.js); keep CSS native. */
+html {
+  scroll-behavior: auto;
+}
+
+/* Page-load fade-in for the whole document */
+body {
+  animation: page-fade-in 0.7s ease both;
+}
+
+@keyframes page-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/*
+ * Scroll reveal.
+ * Hidden state only applies once JS has added `.reveal-ready` to <html>,
+ * so the page is fully visible if JS is disabled or fails.
+ */
+.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 0.8, 0.28, 1),
+    transform 0.7s cubic-bezier(0.22, 0.8, 0.28, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-ready .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Gentle stagger so stacked sections cascade in */
+.reveal-ready .reveal.is-visible {
+  transition-delay: 0.05s;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    animation: none;
+  }
+  .reveal-ready .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

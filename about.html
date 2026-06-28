@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmileLab — About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/layout/page.css" />
+  <link rel="stylesheet" href="css/sections/about.css" />
+  <link rel="stylesheet" href="css/layout/footer.css" />
+  <link rel="stylesheet" href="css/components/chatbot.css" />
+  <link rel="stylesheet" href="css/utilities/animations.css" />
+  <link rel="stylesheet" href="css/base/theme.css" />
+  <script>
+    /* Default to light; only go dark if the user previously chose it.
+       Runs before paint to avoid a flash. */
+    (function () {
+      try {
+        if (localStorage.getItem("smilelab-theme") === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- ===== page header band ===== -->
+  <header class="page-top">
+    <nav class="page-top__nav" aria-label="Primary">
+      <a href="index.html" class="brand">
+        <span class="brand__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3C9.5 3 8.8 4.2 6.8 4.2 4.6 4.2 3 5.9 3 8.4c0 2.1.7 3.6 1.3 5.6.5 1.7.7 3.4 1 5 .3 1.5.7 2.8 1.7 2.8 1.2 0 1.4-1.6 1.7-3.3.3-1.7.6-3.1 1.3-3.1.7 0 1 1.4 1.3 3.1.3 1.7.5 3.3 1.7 3.3 1 0 1.4-1.3 1.7-2.8.3-1.6.5-3.3 1-5C20.3 12 21 10.5 21 8.4 21 5.9 19.4 4.2 17.2 4.2 15.2 4.2 14.5 3 12 3Z"
+              fill="#C9F24D" />
+          </svg>
+        </span>
+        <span class="brand__name">SmileLab</span>
+      </a>
+
+      <div class="nav">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link nav__link--active">About</a>
+        <a href="services.html" class="nav__link">Services</a>
+        <a href="index.html#gallery" class="nav__link">Results</a>
+        <a href="index.html#reviews" class="nav__link">Reviews</a>
+      </div>
+
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" fill="currentColor" />
+        </svg>
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" fill="currentColor" />
+          <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M12 2.5v2.6M12 18.9v2.6M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12h2.6M18.9 12h2.6M4.2 19.8 6 18M18 6l1.8-1.8" />
+          </g>
+        </svg>
+      </button>
+
+      <a href="index.html#book" class="contacts-btn">
+        <span>Contacts</span>
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 12L12 4M12 4H5M12 4V11" stroke="#3B6FB8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </nav>
+
+  </header>
+
+  <section class="about" id="about">
+    <!-- Intro row -->
+    <div class="about__intro">
+      <!-- Left: visual -->
+      <div class="about__visual">
+        <div class="about__image">
+          <img src="assets/images/tooth.svg" alt="Stylized tooth" />
+        </div>
+        <div class="about__badge">
+          <span class="about__badge-num">12+</span>
+          <span class="about__badge-label">years of<br />experience</span>
+        </div>
+      </div>
+
+      <!-- Right: text -->
+      <div class="about__content">
+        <span class="about__eyebrow">About SmileLab</span>
+        <h2 class="about__title">Where modern dentistry meets genuine care</h2>
+        <p class="about__text">
+          At SmileLab, we believe every patient deserves comfortable, affordable, and
+          advanced dental care. Since 2013, we've helped thousands of patients achieve
+          healthier, more confident smiles through personalized treatment plans and
+          modern technology.
+        </p>
+
+        <ul class="about__features">
+          <li class="about__feature">
+            <span class="about__check" aria-hidden="true">✓</span>
+            <div>
+              <strong>Advanced digital equipment</strong>
+              <p>Precision tools and digital imaging for faster, safer treatment.</p>
+            </div>
+          </li>
+          <li class="about__feature">
+            <span class="about__check" aria-hidden="true">✓</span>
+            <div>
+              <strong>Experienced specialists</strong>
+              <p>A multidisciplinary team across every area of dental care.</p>
+            </div>
+          </li>
+          <li class="about__feature">
+            <span class="about__check" aria-hidden="true">✓</span>
+            <div>
+              <strong>Pain-free, comfort-first treatments</strong>
+              <p>A calm, modern clinic with flexible scheduling to put you at ease.</p>
+            </div>
+          </li>
+        </ul>
+
+        <a href="index.html#book" class="about__cta">
+          Book a consultation
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Stats band -->
+    <div class="about__stats">
+      <div class="about__stat">
+        <span class="about__stat-num">15,000+</span>
+        <span class="about__stat-label">Patients treated</span>
+      </div>
+      <div class="about__stat">
+        <span class="about__stat-num">12+</span>
+        <span class="about__stat-label">Years experience</span>
+      </div>
+      <div class="about__stat">
+        <span class="about__stat-num">3</span>
+        <span class="about__stat-label">Dental specialists</span>
+      </div>
+      <div class="about__stat">
+        <span class="about__stat-num">98%</span>
+        <span class="about__stat-label">Satisfaction rate</span>
+      </div>
+      <div class="about__stat">
+        <span class="about__stat-num">2</span>
+        <span class="about__stat-label">Clinic locations</span>
+      </div>
+    </div>
+
+    <!-- Team -->
+    <div class="about__team">
+      <div class="about__team-head">
+        <span class="about__eyebrow">Meet the team</span>
+        <h3 class="about__team-title">Specialists you can trust</h3>
+      </div>
+
+      <div class="about__doctors">
+        <!-- Doctor 1 -->
+        <article class="doctor-card">
+          <div class="doctor-card__photo">
+            <img src="https://i.pravatar.cc/240?img=68" alt="Dr. Aarav Sharma" />
+          </div>
+          <h4 class="doctor-card__name">Dr. Aarav Sharma</h4>
+          <span class="doctor-card__qual">MDS, Prosthodontics</span>
+          <span class="doctor-card__role">Cosmetic &amp; Implant Dentist · 12+ yrs</span>
+          <p class="doctor-card__bio">
+            Specializes in cosmetic dentistry, dental implants, and smile makeovers —
+            with thousands of patients treated using modern, patient-focused care.
+          </p>
+        </article>
+
+        <!-- Doctor 2 -->
+        <article class="doctor-card">
+          <div class="doctor-card__photo">
+            <img src="https://i.pravatar.cc/240?img=45" alt="Dr. Priya Mehta" />
+          </div>
+          <h4 class="doctor-card__name">Dr. Priya Mehta</h4>
+          <span class="doctor-card__qual">BDS</span>
+          <span class="doctor-card__role">General &amp; Pediatric Dentist · 8+ yrs</span>
+          <p class="doctor-card__bio">
+            Gentle, reassuring care for the whole family — from routine checkups to
+            anxious first-timers and our youngest patients.
+          </p>
+        </article>
+
+        <!-- Doctor 3 -->
+        <article class="doctor-card">
+          <div class="doctor-card__photo">
+            <img src="https://i.pravatar.cc/240?img=12" alt="Dr. Kabir Nair" />
+          </div>
+          <h4 class="doctor-card__name">Dr. Kabir Nair</h4>
+          <span class="doctor-card__qual">MDS, Endodontics</span>
+          <span class="doctor-card__role">Root Canal Specialist · 9+ yrs</span>
+          <p class="doctor-card__bio">
+            Expert in single-sitting, pain-free root canal treatments and saving
+            teeth that other clinics would extract.
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="about__certs">
+      <span class="about__certs-label">Accredited &amp; certified</span>
+      <ul class="about__certs-list">
+        <li class="about__cert">Indian Dental Association Member</li>
+        <li class="about__cert">Certified Implantologist</li>
+        <li class="about__cert">Invisalign Certified Provider</li>
+        <li class="about__cert">NABH Guidelines Compliant</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== footer ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <!-- Brand -->
+      <div class="footer__brand">
+        <a class="footer__logo" href="index.html">
+          <span class="footer__logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3C9.5 3 9 4 7 4 5 4 3.6 5.4 3.6 7.6c0 1.9.6 3.2 1.2 5 .4 1.5.6 3 .9 4.5.3 1.4.6 2.4 1.5 2.4 1 0 1.2-1.4 1.5-2.9.2-1.5.5-2.7 1.3-2.7s1.1 1.2 1.3 2.7c.3 1.5.5 2.9 1.5 2.9.9 0 1.2-1 1.5-2.4.3-1.5.5-3 .9-4.5.6-1.8 1.2-3.1 1.2-5C20.4 5.4 19 4 17 4c-2 0-2.5-1-5-1Z" stroke="#10131a" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          SmileLab
+        </a>
+        <p class="footer__tagline">
+          Modern, gentle dental care — helping your whole family smile with confidence.
+        </p>
+        <div class="footer__social">
+          <a class="footer__social-link" href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="17" cy="7" r="1" fill="currentColor"/>
+            </svg>
+          </a>
+          <a class="footer__social-link" href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 8h2V5h-2c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8.5c0-.3.2-.5.5-.5H14Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a class="footer__social-link" href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 6.5c-.6.3-1.3.5-2 .6.7-.4 1.3-1.1 1.5-2-.7.4-1.5.7-2.3.9A3.3 3.3 0 0012 8.8c0 .3 0 .5.1.8-2.7-.1-5.1-1.4-6.7-3.4-.3.5-.4 1-.4 1.6 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2-.5.1-1 .2-1.5.1.4 1.3 1.6 2.3 3.1 2.3A6.7 6.7 0 014 17.6 9.3 9.3 0 009 19c6 0 9.3-5 9.3-9.3v-.4c.6-.5 1.2-1.1 1.7-1.8Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Link columns -->
+      <nav class="footer__col">
+        <h4 class="footer__heading">Services</h4>
+        <a class="footer__link" href="services.html">Teeth Whitening</a>
+        <a class="footer__link" href="services.html">Dental Implants</a>
+        <a class="footer__link" href="services.html">Orthodontics</a>
+        <a class="footer__link" href="services.html">Emergency Care</a>
+      </nav>
+
+      <nav class="footer__col">
+        <h4 class="footer__heading">Clinic</h4>
+        <a class="footer__link" href="about.html">About Us</a>
+        <a class="footer__link" href="about.html">Our Dentists</a>
+        <a class="footer__link" href="index.html#reviews">Reviews</a>
+        <a class="footer__link" href="index.html#book">Book a Visit</a>
+      </nav>
+
+      <!-- Contact -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Get in touch</h4>
+        <p class="footer__contact">123 Bright Avenue, Suite 200<br />Springfield, CA 90210</p>
+        <a class="footer__link" href="tel:+15551234567">(555) 123-4567</a>
+        <a class="footer__link" href="mailto:hello@smilelab.com">hello@smilelab.com</a>
+        <p class="footer__hours">Mon–Fri 8am–6pm · Sat 9am–2pm</p>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <p class="footer__copy">© 2026 SmileLab Dental. All rights reserved.</p>
+      <div class="footer__legal">
+        <a class="footer__link footer__link--small" href="#">Privacy Policy</a>
+        <a class="footer__link footer__link--small" href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== chatbot ===== -->
+  <div class="chatbot" id="chatbot">
+    <!-- Chat panel -->
+    <div class="chatbot__panel" id="chatbotPanel" role="dialog" aria-label="SmileLab chat assistant" aria-hidden="true">
+      <header class="chatbot__header">
+        <span class="chatbot__avatar" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3C9.5 3 9 4 7 4 5 4 3.6 5.4 3.6 7.6c0 1.9.6 3.2 1.2 5 .4 1.5.6 3 .9 4.5.3 1.4.6 2.4 1.5 2.4 1 0 1.2-1.4 1.5-2.9.2-1.5.5-2.7 1.3-2.7s1.1 1.2 1.3 2.7c.3 1.5.5 2.9 1.5 2.9.9 0 1.2-1 1.5-2.4.3-1.5.5-3 .9-4.5.6-1.8 1.2-3.1 1.2-5C20.4 5.4 19 4 17 4c-2 0-2.5-1-5-1Z" stroke="#10131a" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div class="chatbot__id">
+          <p class="chatbot__name">SmileLab Assistant</p>
+          <p class="chatbot__status"><span class="chatbot__dot"></span> Online now</p>
+        </div>
+        <button class="chatbot__close" id="chatbotClose" aria-label="Close chat" type="button">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </header>
+
+      <div class="chatbot__messages" id="chatbotMessages">
+        <div class="chatbot__msg chatbot__msg--bot">
+          Hi there! 👋 I'm the SmileLab assistant. Want to book a visit or ask a quick question?
+        </div>
+      </div>
+
+      <div class="chatbot__quick" id="chatbotQuick">
+        <button class="chatbot__chip" type="button" data-reply="I'd like to book an appointment">Book an appointment</button>
+        <button class="chatbot__chip" type="button" data-reply="What are your opening hours?">Opening hours</button>
+        <button class="chatbot__chip" type="button" data-reply="Do you accept insurance?">Insurance</button>
+      </div>
+
+      <form class="chatbot__form" id="chatbotForm">
+        <input class="chatbot__input" id="chatbotInput" type="text" placeholder="Type your message…" autocomplete="off" />
+        <button class="chatbot__send" type="submit" aria-label="Send message">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 12l16-8-6 16-3-6-7-2Z" stroke="#10131a" stroke-width="1.7" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- Floating launcher bubble -->
+    <button class="chatbot__launcher" id="chatbotLauncher" aria-label="Open chat" type="button">
+      <span class="chatbot__launcher-icon chatbot__launcher-icon--chat" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 5h16v11H8l-4 4V5Z" stroke="#10131a" stroke-width="1.7" stroke-linejoin="round"/>
+          <path d="M8 9h8M8 12h5" stroke="#10131a" stroke-width="1.7" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="chatbot__launcher-icon chatbot__launcher-icon--close" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6l12 12M18 6L6 18" stroke="#10131a" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="chatbot__badge" id="chatbotBadge">1</span>
+    </button>
+  </div>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="js/core/smooth.js" defer></script>
+  <script src="js/utils/reveal.js" defer></script>
+  <script src="js/components/chatbot.js" defer></script>
+  <script src="js/core/theme.js" defer></script>
+</body>
+</html>
