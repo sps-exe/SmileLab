@@ -1,17 +1,42 @@
-# SmileLab — Modern Dental Care
+<div align="center">
 
-A responsive marketing site for a fictional modern dental clinic. Built with plain
-HTML, CSS, and vanilla JavaScript — no build step, no framework.
+# 🦷 SmileLab — Modern Dental Care
 
-## Features
+A responsive marketing website for a modern dental clinic — built from scratch with
+plain **HTML, CSS, and vanilla JavaScript**. No frameworks, no build step.
 
-- **Three pages** — Home (`index.html`), About (`about.html`), Services (`services.html`)
-- **Light & dark mode** — toggle in the navbar, remembers your choice, defaults to light
-- **Responsive** — adapts from desktop down to mobile
-- **Interactive bits** — smooth scrolling, scroll-reveal animations, and a scripted chatbot widget
-- **Component library** — each UI block has a standalone demo page (`hero.html`, `faq.html`, `gallery.html`, …)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-smilelab--eight.vercel.app-000?style=for-the-badge&logo=vercel)](https://smilelab-eight.vercel.app)
 
-## Project structure
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000?style=flat&logo=vercel)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
+**[🌐 View it live →](https://smilelab-eight.vercel.app)**
+
+</div>
+
+---
+
+## ✨ Features
+
+- **🌗 Light & dark mode** — toggle in the navbar, defaults to light, remembers your choice via `localStorage`
+- **📱 Fully responsive** — adapts cleanly from widescreen down to mobile
+- **🎬 Motion** — smooth scrolling and scroll-reveal animations
+- **💬 Chatbot widget** — a scripted assistant with quick-reply actions
+- **🧩 Component-driven** — every UI block has its own standalone demo page
+- **⚡ Zero dependencies** — opens straight in a browser; nothing to install
+
+## 📄 Pages
+
+| Page | File | Description |
+|------|------|-------------|
+| Home | `index.html` | Hero, about, services, process, gallery, reviews, FAQ, booking CTA |
+| About | `about.html` | Clinic story, team, and credentials |
+| Services | `services.html` | Treatment catalogue and pricing |
+
+## 🗂️ Project structure
 
 ```
 SmileLab/
@@ -21,7 +46,7 @@ SmileLab/
 │   ├── base/        # reset, base styles, theme (dark mode)
 │   ├── layout/      # page shell, footer
 │   ├── sections/    # hero, about, services, gallery, reviews, faq, cta, process
-│   ├── components/  # chatbot, stat card, avatar stack, etc.
+│   ├── components/  # chatbot, stat card, avatar stack, …
 │   └── utilities/   # animations
 ├── js/
 │   ├── core/        # smooth scroll, theme toggle
@@ -30,17 +55,37 @@ SmileLab/
 └── assets/images/   # svg art
 ```
 
-## Running locally
+## 🚀 Running locally
 
-It's static — open `index.html` directly, or serve the folder:
+It's a static site — open `index.html` directly, or serve the folder:
 
 ```bash
+# clone
+git clone https://github.com/sps-exe/SmileLab.git
+cd SmileLab
+
+# serve (any static server works)
 python3 -m http.server 8888
-# then visit http://localhost:8888
+# → http://localhost:8888
 ```
 
-## Theming
+## 🎨 Theming
 
 Colors are driven by CSS custom properties (`--blue`, `--surface`, `--text`, `--lime`, …).
 Dark mode is a set of overrides under `:root[data-theme="dark"]` in `css/base/theme.css`;
-the toggle simply flips that attribute on `<html>` and saves the choice to `localStorage`.
+the navbar toggle flips that attribute on `<html>` and persists the choice. The page
+defaults to light on first load.
+
+## 📦 Deployment
+
+Continuously deployed to **[Vercel](https://vercel.com)** — pushes to `main` ship automatically.
+
+## 📜 License
+
+Released under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+Built with care by <a href="https://github.com/sps-exe">@sps-exe</a>
+</div>
